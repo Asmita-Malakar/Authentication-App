@@ -67,7 +67,8 @@ function App() {
     <div className = "buttonsGroup">
         <Button className = "Button" disabled = {loading || currentUser != null} onClick = {handleSignUp}>Sign Up</Button> 
         <Button className = "Button" disabled = {loading || currentUser != null} onClick = {handleLogin}>Log In</Button>
-        <Button className = "Button" disabled = {loading || currentUser == null} onClick = {handleLogout}>LogOut</Button>
+         //User can only logout when they are logged in
+        <Button className = "Button" disabled = {loading || currentUser == null} onClick = {handleLogout}>LogOut</Button> 
       </div>
     </div>
   );
