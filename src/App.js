@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import  {signup, useAuth, logout, login} from "./firebase";
 import { useRef, useState } from 'react';
-import {Form, Card, Button, Alert, Tex} from "react-bootstrap"
+import {Button, Alert, Text} from "react-bootstrap"
 
 function App() {
   const emailRef = useRef();
