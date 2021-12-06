@@ -5,10 +5,11 @@ import { useRef, useState } from 'react';
 import {Button, Alert, Text} from "react-bootstrap"
 
 function App() {
+  //defining constants
   const emailRef = useRef();
   const passwordRef = useRef();
   const [ loading, setLoading ] = useState(false);
-  const [error, setError] = useState("")
+  const [error, setError] = useState("") //error message upon failure
   const currentUser = useAuth();
 
   async function handleSignUp() {
@@ -64,7 +65,7 @@ function App() {
         <input className = "Input" ref = {passwordRef} type = "password" placeholder = "Password"></input>
     </div>
     <div className = "buttonsGroup">
-        <Button className = "Button" disabled = {loading || currentUser != null} onClick = {handleSignUp}>Sign Up</Button>
+        <Button className = "Button" disabled = {loading || currentUser != null} onClick = {handleSignUp}>Sign Up</Button> 
         <Button className = "Button" disabled = {loading || currentUser != null} onClick = {handleLogin}>Log In</Button>
         <Button className = "Button" disabled = {loading || currentUser == null} onClick = {handleLogout}>LogOut</Button>
       </div>
